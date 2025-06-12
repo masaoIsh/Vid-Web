@@ -102,11 +102,11 @@ export default function AboutPage() {
             </div>
             <div className="bg-zinc-900 rounded-xl p-8 flex flex-col items-center text-center shadow border border-zinc-700">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black text-2xl font-bold mb-4">2</div>
-              <div className="text-lg text-white font-semibold mb-2">Develop critical thinking and problem-solving skills</div>
+              <div className="text-lg text-white font-semibold mb-2">Develop confidence and efficacy in using Generative AI</div>
             </div>
             <div className="bg-zinc-900 rounded-xl p-8 flex flex-col items-center text-center shadow border border-zinc-700">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black text-2xl font-bold mb-4">3</div>
-              <div className="text-lg text-white font-semibold mb-2">Promote understanding of emerging technologies</div>
+              <div className="text-lg text-white font-semibold mb-2">Promote an optimistic view towards Society 5.0</div>
             </div>
           </div>
         </section>
