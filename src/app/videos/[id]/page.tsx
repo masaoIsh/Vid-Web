@@ -1,13 +1,8 @@
 import { videos } from '@/lib/data/videos';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next'; // Import Metadata for type hinting (optional, but good practice)
 
-interface VideoPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function VideoPage({ params }: VideoPageProps) {
+export default function VideoPage({ params }: { params: { id: string } }) {
   const video = videos.find((v) => v.id === params.id);
 
   if (!video) {
