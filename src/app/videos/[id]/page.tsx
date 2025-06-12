@@ -2,8 +2,9 @@ import { videos } from '@/lib/data/videos';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next'; // Import Metadata for type hinting (optional, but good practice)
 
-export default function VideoPage({ params }: { params: { id: string } }) {
-  const video = videos.find((v) => v.id === params.id);
+export default async function VideoPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const video = videos.find((v) => v.id === id);
 
   if (!video) {
     notFound();
