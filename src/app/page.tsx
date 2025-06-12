@@ -19,9 +19,6 @@ export default function Home() {
               objectPosition: 'center',
             }}
             quality={100}
-            onError={(e) => {
-              console.error('Error loading hero image:', e);
-            }}
           />
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/60" />
