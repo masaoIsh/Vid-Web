@@ -1,22 +1,25 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-black flex flex-col items-center justify-start relative overflow-hidden">
-      {/* Hero Section with Dotted Grid */}
+      {/* Hero Section with Background Image */}
       <div className="flex-1 w-full flex flex-col items-center justify-center text-center relative overflow-hidden" style={{ minHeight: 'calc(100vh - 4rem)' }}>
-        {/* Dotted grid background only for hero */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full z-0"
-          style={{
-            backgroundImage:
-              'radial-gradient(white 2.5px, transparent 2.5px)',
-            backgroundSize: '48px 48px',
-            backgroundPosition: '0 0',
-            opacity: 0.25,
-          }}
-        />
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <Image
+            src="/hero-bg.png"
+            alt="Hero Background"
+            fill
+            priority
+            className="object-cover"
+            quality={100}
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           <h1 className="text-6xl md:text-8xl font-extrabold font-mono text-white mb-8 tracking-tight">
             STEM Education
