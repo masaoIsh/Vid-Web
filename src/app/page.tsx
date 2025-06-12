@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import TypewriterText from '@/components/ui/TypewriterText';
 
 export default function Home() {
   return (
@@ -30,9 +31,11 @@ export default function Home() {
             <br />
             <span className="text-4xl md:text-6xl font-mono font-bold">for Society 5.0</span>
           </h1>
-          <p className="text-lg md:text-2xl font-mono text-cyan-200 mb-12">
-            Building future-ready skills for a smarter world
-          </p>
+          <TypewriterText
+            text="Building future-ready skills for a smarter world."
+            className="text-xl md:text-2xl text-cyan-200 mb-12 font-mono tracking-wide"
+            delay={50}
+          />
           <Link
             href="/videos"
             className="inline-block px-10 py-4 border-2 border-white text-white font-mono text-xl rounded-full hover:bg-white hover:text-black transition"
