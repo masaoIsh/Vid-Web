@@ -16,7 +16,6 @@ A modern web platform for distributing educational videos about STEM and Society
 - Next.js 14 (App Router)
 - TypeScript
 - Tailwind CSS
-- YouTube/Vimeo API integration
 
 ## Getting Started
 
@@ -32,9 +31,6 @@ A modern web platform for distributing educational videos about STEM and Society
    ```
 
 3. Create a `.env.local` file in the root directory and add your environment variables:
-   ```
-   NEXT_PUBLIC_YOUTUBE_API_KEY=your_youtube_api_key
-   ```
 
 4. Run the development server:
    ```bash
