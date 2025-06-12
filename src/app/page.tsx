@@ -13,8 +13,15 @@ export default function Home() {
             alt="Hero Background"
             fill
             priority
-            className="object-cover"
+            sizes="100vw"
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
             quality={100}
+            onError={(e) => {
+              console.error('Error loading hero image:', e);
+            }}
           />
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/60" />
