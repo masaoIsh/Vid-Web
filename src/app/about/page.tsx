@@ -92,6 +92,9 @@ export default function AboutPage() {
         <hr className="border-t border-white my-12" />
         <section className="mb-12 p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Our Vision</h2>
+          <p className="text-base md:text-lg text-gray-200 leading-relaxed mb-8 text-center">
+            Our vision is centered around creating an engaging and accessible learning environment that bridges the gap between theoretical knowledge and practical application. We believe in empowering students with the tools and mindset needed to thrive in an increasingly technology-driven world.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 rounded-xl p-8 flex flex-col items-center text-center shadow border border-zinc-700">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black text-2xl font-bold mb-4">1</div>
@@ -110,6 +113,9 @@ export default function AboutPage() {
         <hr className="border-t border-white my-12" />
         <section className="mb-12 p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">Interactive Learning</h2>
+          <p className="text-base md:text-lg text-gray-200 leading-relaxed mb-8 text-center">
+            We've developed a comprehensive learning approach that combines visual content, interactive assessments, and AI-powered discussions. This multi-faceted approach ensures that students can learn at their own pace while actively engaging with the material through various interactive elements.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900 rounded-xl p-8 flex flex-col items-center text-center shadow border border-zinc-700">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black text-2xl font-bold mb-4">A</div>
