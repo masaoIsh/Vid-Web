@@ -34,21 +34,13 @@ export default function VideoCard({
       <div className="p-6">
         <h3 className="text-lg font-medium text-white">{title}</h3>
         <p className="mt-2 text-sm text-white">{description}</p>
-        <div className="mt-4 flex space-x-4">
+        <div className="mt-4">
           <Link
             href={`/videos/${videoId}`}
-            className="inline-flex items-center px-4 py-2 border border-white text-sm font-medium rounded-md text-white bg-black hover:bg-white hover:text-black transition"
+            className="inline-flex items-center px-6 py-2 border border-white text-sm font-medium rounded-md text-white bg-black hover:bg-white hover:text-black transition w-full justify-center"
           >
             Watch Video
           </Link>
-          <a
-            href={kahootLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 border border-white text-sm font-medium rounded-md text-white bg-black hover:bg-white hover:text-black transition"
-          >
-            Take Quiz
-          </a>
         </div>
       </div>
     </div>
