@@ -52,9 +52,6 @@ export default function VideoCard({
             className="object-cover"
           />
         )}
-        <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm">
-          {duration}
-        </div>
       </div>
       <div className="p-6">
         <h3 className="text-lg font-medium text-white">{title}</h3>
