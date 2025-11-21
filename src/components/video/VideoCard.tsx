@@ -18,14 +18,31 @@ export default function VideoCard({
 }: VideoCardProps) {
   const isGoogleDriveImage = thumbnailUrl.includes('drive.google.com');
   
+  // Extract file ID from Google Drive URL and convert to direct image URL
+  const getGoogleDriveImageUrl = (url: string) => {
+    if (!url.includes('drive.google.com')) return url;
+    // Extract ID from various Google Drive URL formats
+    const idMatch = url.match(/[?&]id=([^&]+)/);
+    if (idMatch) {
+      const fileId = idMatch[1];
+      // Use the thumbnail API which is more reliable
+      return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+    }
+    return url;
+  };
+  
+  const imageUrl = isGoogleDriveImage ? getGoogleDriveImageUrl(thumbnailUrl) : thumbnailUrl;
+  
   return (
     <div className="bg-black overflow-hidden shadow rounded-xl border-2 border-white transition-shadow duration-300 hover:shadow-[0_0_24px_6px_rgba(34,197,94,0.7)]">
       <div className="relative aspect-video">
         {isGoogleDriveImage ? (
-          <img
-            src={thumbnailUrl}
+          <Image
+            src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            unoptimized
           />
         ) : (
           <Image
