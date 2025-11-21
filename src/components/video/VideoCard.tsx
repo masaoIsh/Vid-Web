@@ -7,7 +7,6 @@ interface VideoCardProps {
   thumbnailUrl: string;
   duration: string;
   videoId: string;
-  kahootLink: string;
 }
 
 export default function VideoCard({
@@ -16,7 +15,6 @@ export default function VideoCard({
   thumbnailUrl,
   duration,
   videoId,
-  kahootLink,
 }: VideoCardProps) {
   return (
     <div className="bg-black overflow-hidden shadow rounded-xl border-2 border-white transition-shadow duration-300 hover:shadow-[0_0_24px_6px_rgba(34,197,94,0.7)]">
@@ -45,4 +43,4 @@ export default function VideoCard({
       </div>
     </div>
   );
-} 
+}

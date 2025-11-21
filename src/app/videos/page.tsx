@@ -22,10 +22,9 @@ export default function VideosPage() {
             thumbnailUrl={video.thumbnailUrl}
             duration={video.duration}
             videoId={video.id}
-            kahootLink={video.kahootLink}
           />
         ))}
       </div>
     </div>
   );
-} 
+}

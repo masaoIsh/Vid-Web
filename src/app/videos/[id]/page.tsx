@@ -15,21 +15,25 @@ export default async function VideoPage({ params }: { params: Promise<{ id: stri
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         {/* Video Player */}
         <div className="lg:col-span-8">
-          <div className="aspect-video bg-black rounded-lg overflow-hidden border border-zinc-800">
-            {video.videoUrl.includes('drive.google.com') ? (
-              <iframe
-                src={video.videoUrl}
-                className="w-full h-full"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              />
+          <div className="aspect-video bg-black rounded-lg overflow-hidden border border-zinc-800 flex items-center justify-center relative">
+            {video.videoUrl ? (
+              video.videoUrl.includes('drive.google.com') ? (
+                <iframe
+                  src={video.videoUrl}
+                  className="w-full h-full"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
+              ) : (
+                <iframe
+                  src={video.videoUrl.replace('watch?v=', 'embed/')}
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              )
             ) : (
-              <iframe
-                src={video.videoUrl.replace('watch?v=', 'embed/')}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <div className="text-white text-xl font-medium">This video is no longer available.</div>
             )}
           </div>
 
@@ -39,14 +43,6 @@ export default async function VideoPage({ params }: { params: Promise<{ id: stri
           </div>
 
           <div className="mt-8 flex space-x-4">
-            <a
-              href={video.kahootLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-cyan-400 hover:bg-cyan-300"
-            >
-              Take Kahoot Quiz
-            </a>
             <a
               href="https://chatgpt.com/g/g-6829a7187bdc819193509149f2c7667a-dreamahead"
               target="_blank"
@@ -98,4 +94,4 @@ export default async function VideoPage({ params }: { params: Promise<{ id: stri
       </div>
     </div>
   );
-} 
+}
