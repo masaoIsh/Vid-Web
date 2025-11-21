@@ -16,15 +16,25 @@ export default function VideoCard({
   duration,
   videoId,
 }: VideoCardProps) {
+  const isGoogleDriveImage = thumbnailUrl.includes('drive.google.com');
+  
   return (
     <div className="bg-black overflow-hidden shadow rounded-xl border-2 border-white transition-shadow duration-300 hover:shadow-[0_0_24px_6px_rgba(34,197,94,0.7)]">
       <div className="relative aspect-video">
-        <Image
-          src={thumbnailUrl}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+        {isGoogleDriveImage ? (
+          <img
+            src={thumbnailUrl}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <Image
+            src={thumbnailUrl}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        )}
         <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm">
           {duration}
         </div>
